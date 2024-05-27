@@ -1,10 +1,10 @@
 // src/stories/Button.stories.tsx
 import React from 'react';
-import { ToggleSwitch } from './ToggleSwitch';
+import { CellToggleSwitch } from './ToggleSwitch';
 
 export default {
   title: 'Cell Conponents/ToggleSwitch',
-  component: ToggleSwitch,
+  component: CellToggleSwitch,
   argTypes: {
     id: {
       control: 'text',
@@ -26,29 +26,29 @@ export default {
   tags: ['autodocs'],
 };
 
-const Template = (args) => <ToggleSwitch {...args} />;
+const Template = (args) => <CellToggleSwitch {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  ...ToggleSwitch.defaultProps,
+  ...CellToggleSwitch.defaultProps,
 };
 
 export const CheckedToggleSwitch = Template.bind({});
 CheckedToggleSwitch.args = {
-  ...ToggleSwitch.defaultProps,
+  ...CellToggleSwitch.defaultProps,
   isSwitchChecked: true,
 };
 
 export const CheckedReadOnlyToggleSwitch = Template.bind({});
 CheckedReadOnlyToggleSwitch.args = {
-  ...ToggleSwitch.defaultProps,
+  ...CellToggleSwitch.defaultProps,
   isSwitchChecked: true,
   isSwitchReadonly: true,
 };
 
 export const DisabledToggleSwitch = Template.bind({});
 DisabledToggleSwitch.args = {
-  ...ToggleSwitch.defaultProps,
+  ...CellToggleSwitch.defaultProps,
   isSwitchChecked: true,
   isSwitchDisabled: true,
 };

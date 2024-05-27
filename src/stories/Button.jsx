@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '@chakra-ui/react'
 import * as MdIcons from 'react-icons/md';
 
-export const BasicButton = ({ primary, buttonColor, content, iconName, btnNum, ...props }) => {
+export const CellButton = ({ primary, buttonColor, content, iconName, btnNum, ...props }) => {
   const mode = primary ? 'solid' : 'outline';
   const Icon = MdIcons[iconName] || MdIcons.MdHelpOutline;
 
@@ -19,7 +19,7 @@ export const BasicButton = ({ primary, buttonColor, content, iconName, btnNum, .
   );
 };
 
-BasicButton.defaultProps = {
+CellButton.defaultProps = {
   content: '',
   buttonColor: 'blue',
   iconName: '',

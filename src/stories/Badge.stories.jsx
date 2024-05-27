@@ -1,10 +1,10 @@
 // src/stories/Button.stories.tsx
 import React from 'react';
-import { BasicBadge } from './Badge';
+import { CellBadge } from './Badge';
 
 export default {
   title: 'Cell Conponents/Badge',
-  component: BasicBadge,
+  component: CellBadge,
   argTypes: {
     content: {
       control: 'text',
@@ -19,11 +19,11 @@ export default {
   tags: ['autodocs'],
 };
 
-const Template = (args) => <BasicBadge {...args} />;
+const Template = (args) => <CellBadge {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  ...BasicBadge.defaultProps,
+  ...CellBadge.defaultProps,
   content: 'status',
 };
 

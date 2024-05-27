@@ -1,10 +1,10 @@
 // src/stories/Button.stories.tsx
 import React from 'react';
-import { BasicButton } from './Button';
+import { CellButton } from './Button';
 
 export default {
   title: 'Cell Conponents/Button',
-  component: BasicButton,
+  component: CellButton,
   argTypes: {
     primary: {
       control: 'boolean',
@@ -28,24 +28,24 @@ export default {
   tags: ['autodocs'],
 };
 
-const Template = (args) => <BasicButton {...args} />;
+const Template = (args) => <CellButton {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  ...BasicButton.defaultProps,
+  ...CellButton.defaultProps,
   primary: true,
   content: 'Button',
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  ...BasicButton.defaultProps,
+  ...CellButton.defaultProps,
   content: 'Button',
 };
 
 export const HasIcon = Template.bind({});
 HasIcon.args = {
-  ...BasicButton.defaultProps,
+  ...CellButton.defaultProps,
   content: 'Copy',
   buttonColor: 'gray',
   iconName: 'MdContentCopy',

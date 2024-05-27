@@ -2,7 +2,7 @@ import React from 'react';
 import { FaSort, FaSortDown, FaSortUp } from "react-icons/fa";
 import { Box } from '@chakra-ui/react';
 
-export const Text = ({ content, hyperLink, longTextLines, isHeader }) => {
+export const CellText = ({ content, hyperLink, longTextLines, isHeader }) => {
   const boxStyle = {
     padding: "2px 5px",
     w: '100%',
@@ -40,7 +40,7 @@ export const Text = ({ content, hyperLink, longTextLines, isHeader }) => {
   );
 };
 
-Text.defaultProps = {
+CellText.defaultProps = {
   content: '',
   hyperLink: '', 
   longTextLines: 0,

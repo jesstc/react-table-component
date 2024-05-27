@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch } from '@chakra-ui/react'
 import { useState } from 'react';
 
-export const ToggleSwitch = ({ id, isSwitchChecked, isSwitchReadonly, isSwitchDisabled }) => {
+export const CellToggleSwitch = ({ id, isSwitchChecked, isSwitchReadonly, isSwitchDisabled }) => {
   const [isChecked, setIsChecked] = useState(isSwitchChecked);
 
   return (
@@ -16,7 +16,7 @@ export const ToggleSwitch = ({ id, isSwitchChecked, isSwitchReadonly, isSwitchDi
   );
 };
 
-ToggleSwitch.defaultProps = {
+CellToggleSwitch.defaultProps = {
   id: '',
   isSwitchChecked: false,
   isSwitchReadonly: false,

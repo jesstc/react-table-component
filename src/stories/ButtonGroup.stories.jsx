@@ -1,10 +1,10 @@
 // src/stories/Button.stories.tsx
 import React from 'react';
-import { BasicButtonGroup } from './ButtonGroup';
+import { CellButtonGroup } from './ButtonGroup';
 
 export default {
   title: 'Cell Conponents/ButtonGroup',
-  component: BasicButtonGroup,
+  component: CellButtonGroup,
   argTypes: {
     btns: {
       control: 'object',
@@ -14,11 +14,11 @@ export default {
   tags: ['autodocs'],
 };
 
-const Template = (args) => <BasicButtonGroup {...args} />;
+const Template = (args) => <CellButtonGroup {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  ...BasicButtonGroup.defaultProps,
+  ...CellButtonGroup.defaultProps,
 };
 
 export const FunctionButtonGroup = Template.bind({});

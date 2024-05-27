@@ -1,7 +1,7 @@
 import React from 'react';
 import { Badge } from '@chakra-ui/react'
 
-export const BasicBadge = ({ badgeColor, content }) => {
+export const CellBadge = ({ badgeColor, content }) => {
   return (
     <Badge
       variant='subtle' 
@@ -12,7 +12,7 @@ export const BasicBadge = ({ badgeColor, content }) => {
   );
 };
 
-BasicBadge.defaultProps = {
+CellBadge.defaultProps = {
   content: '',
   badgeColor: 'gray',
 };

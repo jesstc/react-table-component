@@ -13,7 +13,7 @@ export const BasicBadge = ({ badgeColor, content }) => {
 };
 
 BasicBadge.defaultProps = {
-  content: 'status',
+  content: '',
   badgeColor: 'gray',
 };
   

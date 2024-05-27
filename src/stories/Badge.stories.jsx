@@ -24,6 +24,7 @@ const Template = (args) => <BasicBadge {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   ...BasicBadge.defaultProps,
+  content: 'status',
 };
 
 export const Pending = Template.bind({});

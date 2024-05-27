@@ -44,6 +44,7 @@ Secondary.args = {
 export const HasIcon = Template.bind({});
 HasIcon.args = {
   ...BasicButton.defaultProps,
-  content: 'Delete',
-  iconName: 'MdDelete',
+  content: 'Copy',
+  buttonColor: 'gray',
+  iconName: 'MdContentCopy',
 };

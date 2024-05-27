@@ -13,5 +13,8 @@ export const BasicButtonGroup = ({ btns }) => {
 };
 
 BasicButtonGroup.defaultProps = {
-  btns: [{primary: true, content: 'Button', buttonColor: 'blue', iconName: '',}],
+  btns: [
+    {primary: true, content: 'Button 1', buttonColor: 'blue', iconName: ''},
+    {primary: false, content: 'Button 2', buttonColor: 'blue', iconName: ''},
+  ],
 };

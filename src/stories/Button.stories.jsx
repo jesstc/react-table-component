@@ -32,13 +32,15 @@ const Template = (args) => <BasicButton {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  primary: true,
   ...BasicButton.defaultProps,
+  primary: true,
+  content: 'Button',
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
   ...BasicButton.defaultProps,
+  content: 'Button',
 };
 
 export const HasIcon = Template.bind({});

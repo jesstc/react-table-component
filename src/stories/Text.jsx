@@ -41,7 +41,7 @@ export const Text = ({ content, hyperLink, longTextLines, isHeader }) => {
 };
 
 Text.defaultProps = {
-  content: 'text',
+  content: '',
   hyperLink: '', 
   longTextLines: 0,
   isHeader: false,

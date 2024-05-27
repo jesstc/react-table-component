@@ -20,7 +20,7 @@ export const BasicButton = ({ primary, buttonColor, content, iconName, btnNum, .
 };
 
 BasicButton.defaultProps = {
-  content: 'Button',
+  content: '',
   buttonColor: 'blue',
   iconName: '',
 };

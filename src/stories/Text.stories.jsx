@@ -30,6 +30,7 @@ const Template = (args) => <Text {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   ...Text.defaultProps,
+  content: 'text',
 };
 
 export const HyperLink = Template.bind({});

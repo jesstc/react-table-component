@@ -1,5 +1,15 @@
 /** @type { import('@storybook/react').Preview } */
-const preview = {
+import { ChakraProvider } from '@chakra-ui/react';
+
+export const decorators = [
+  (Story) => (
+    <ChakraProvider>
+      <Story />
+    </ChakraProvider>
+  )
+];
+
+export const preview = {
   parameters: {
     controls: {
       matchers: {
@@ -9,5 +19,3 @@ const preview = {
     },
   },
 };
-
-export default preview;

@@ -1,8 +1,9 @@
 import React from 'react';
 import { Radio, RadioGroup, Stack } from '@chakra-ui/react'
+import { useState } from 'react';
 
 export const CellRadios = ({ radioName, defaultValue, radioContents }) => {
-  const [value, setValue] = React.useState(defaultValue);
+  const [value, setValue] = useState(defaultValue);
 
   return (
     <RadioGroup onChange={setValue} value={value} name={radioName}>

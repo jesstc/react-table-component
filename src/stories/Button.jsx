@@ -1,24 +1,24 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import './button.css';
-import { Button, ButtonGroup } from '@chakra-ui/react'
+import { Button } from '@chakra-ui/react'
+import * as MdIcons from 'react-icons/md';
 
-export const BasicButton = ({ primary, backgroundColor, content, ...props }) => {
+export const BasicButton = ({ primary, buttonColor, content, iconName, ...props }) => {
   const mode = primary ? 'solid' : 'outline';
+  const Icon = MdIcons[iconName] || MdIcons.MdHelpOutline;
   return (
-    <Button variant={mode} colorScheme={backgroundColor} size='sm' {...props}>
+    <Button size='sm' 
+      variant={mode} 
+      colorScheme={buttonColor}
+      leftIcon={iconName.trim().length !== 0 && <Icon />}
+      {...props}
+    >
       {content}
     </Button>
   );
 };
 
-Button.propTypes = {
-  primary: PropTypes.bool,
-  backgroundColor: PropTypes.string,
-  content: PropTypes.string.isRequired,
-};
-
-Button.defaultProps = {
-  primary: false,
-  // backgroundColor: 'blue',
+BasicButton.defaultProps = {
+  content: 'Button',
+  buttonColor: 'blue',
+  iconName: '',
 };

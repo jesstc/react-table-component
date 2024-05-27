@@ -5,21 +5,45 @@ import { BasicButton } from './Button';
 export default {
   title: 'Cell Conponents/Button',
   component: BasicButton,
+  argTypes: {
+    primary: {
+      control: 'boolean',
+      description: 'Types of the button.',
+    },
+    buttonColor: {
+      control: 'select',
+      options: ['gray', 'red', 'yellow', 'green', 'blue'],
+      description: 'The background colors of the button.',
+    },
+    content: {
+      control: 'text',
+      description: 'The text content of the button.',
+    },
+    iconName: {
+      control: 'text',
+      description: 'The icon name of react-icons. See more details in https://react-icons.github.io/react-icons/.',
+    },
+  },
+
+  tags: ['autodocs'],
 };
 
 const Template = (args) => <BasicButton {...args} />;
 
 export const Primary = Template.bind({});
-
 Primary.args = {
   primary: true,
-  content: 'Button',
-  backgroundColor: 'blue',
+  ...BasicButton.defaultProps,
 };
 
 export const Secondary = Template.bind({});
-
 Secondary.args = {
-  content: 'Button',
-  backgroundColor: 'blue',
+  ...BasicButton.defaultProps,
+};
+
+export const HasIcon = Template.bind({});
+HasIcon.args = {
+  ...BasicButton.defaultProps,
+  content: 'Delete',
+  iconName: 'MdDelete',
 };

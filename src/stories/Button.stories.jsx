@@ -1,11 +1,10 @@
 // src/stories/Button.stories.tsx
 import React from 'react';
 import { BasicButton } from './Button';
-import { Button, background } from '@chakra-ui/react';
 
 export default {
   title: 'Cell Conponents/Button',
-  component: Button,
+  component: BasicButton,
 };
 
 const Template = (args) => <BasicButton {...args} />;

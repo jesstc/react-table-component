@@ -1,4 +1,3 @@
-// src/stories/Button.stories.tsx
 import React from 'react';
 import { CellImage } from './Image';
 

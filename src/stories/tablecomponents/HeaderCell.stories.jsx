@@ -6,10 +6,8 @@ export default {
   component: HeaderCell,
   argTypes: {
     CellTextProps: {
-      content: {
-        control: 'text',
-        description: 'Text content of table header',
-      },
+      control: 'object',
+      description: 'The aguments in `CellText` component.',
     },
   },
   tags: ['autodocs'],
@@ -22,5 +20,4 @@ Default.args = {
   CellTextProps: {
     content: '商品名稱',
   },
-  ...HeaderCell.defaultProps,
 };

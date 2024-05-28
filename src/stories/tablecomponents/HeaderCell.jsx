@@ -13,10 +13,3 @@ HeaderCell.propTypes = {
     content: PropTypes.string.isRequired,
   }).isRequired,
 };
-
-HeaderCell.defaultProps = {
-  CellTextProps: {
-    content: 'Header Title',
-  },
-};
-  

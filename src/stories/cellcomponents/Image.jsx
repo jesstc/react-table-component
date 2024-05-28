@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Image } from '@chakra-ui/react'
 
 export const CellImage = ({ imgSrc, altText, imgSize, borderRadius }) => {
@@ -10,6 +11,13 @@ export const CellImage = ({ imgSrc, altText, imgSize, borderRadius }) => {
       borderRadius={borderRadius + '%'}
     />
   );
+};
+
+CellImage.propTypes = {
+  imgSrc: PropTypes.string.isRequired, 
+  altText: PropTypes.string,
+  imgSize: PropTypes.number,
+  borderRadius: PropTypes.number,
 };
 
 CellImage.defaultProps = {

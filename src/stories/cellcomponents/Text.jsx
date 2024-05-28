@@ -24,6 +24,7 @@ export const CellText = ({ content, hyperLink, longTextLines, isHeader }) => {
       display: "flex",
       flexDirection: "row",
       alignItems: "center",
+      gap: "5px",
       backgroundColor: '#F8F9FC',
       fontWeight: "bold",
     };

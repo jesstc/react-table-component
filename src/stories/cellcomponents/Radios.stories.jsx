@@ -25,11 +25,10 @@ const Template = (args) => <CellRadios {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  ...CellRadios.defaultProps,
-  defaultValue: 'val1',
   radioContents: [
     {value: 'val1', content: 'Value 1'},
     {value: 'val2', content: 'Value 2'},
     {value: 'val3', content: 'Value 3'},
   ],
+  defaultValue: 'val1',
 };

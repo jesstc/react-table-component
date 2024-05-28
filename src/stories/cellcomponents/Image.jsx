@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Image } from '@chakra-ui/react'
 
-export const CellImage = ({ imgSrc, altText, imgSize, borderRadius }) => {
+export const CellImage = ({ imgSrc, altText = '', imgSize = 100, borderRadius = 0 }) => {
   return (
     <Image
       src={imgSrc}
@@ -21,9 +21,9 @@ CellImage.propTypes = {
 };
 
 CellImage.defaultProps = {
-  imgSrc: '',
-  altText: '',
-  imgSize: 100,
-  borderRadius: 0,
+  // imgSrc: '',
+  // altText: '',
+  // imgSize: 100,
+  // borderRadius: 0,
 };
   

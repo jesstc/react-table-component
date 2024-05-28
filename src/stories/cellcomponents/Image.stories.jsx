@@ -29,16 +29,14 @@ const Template = (args) => <CellImage {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  ...CellImage.defaultProps,
   imgSrc: 'https://i.ytimg.com/vi/vUHkI2SQMas/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAemPgiogFppNDagOM-zVE3CvbPxw',
   altText: '91APP Logo',
 };
 
 export const CircleImage = Template.bind({});
 CircleImage.args = {
-  ...CellImage.defaultProps,
   imgSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEc2x2YFxfnNC3c8FQUUcgVMqYe9RS0rA75_gs5qzKng&s',
   altText: '91APP Logo',
   imgSize: 50,
-  borderRadius: '50',
+  borderRadius: 50,
 };

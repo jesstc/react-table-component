@@ -5,6 +5,10 @@ export default {
   title: 'Cell Conponents/Button',
   component: CellButton,
   argTypes: {
+    content: {
+      control: 'text',
+      description: 'The text content of the button.',
+    },
     primary: {
       control: 'boolean',
       description: 'Types of the button.',
@@ -13,10 +17,6 @@ export default {
       control: 'select',
       options: ['gray', 'red', 'yellow', 'green', 'blue'],
       description: 'The background colors of the button.',
-    },
-    content: {
-      control: 'text',
-      description: 'The text content of the button.',
     },
     iconName: {
       control: 'text',
@@ -31,14 +31,12 @@ const Template = (args) => <CellButton {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  ...CellButton.defaultProps,
-  primary: true,
   content: 'Button',
+  primary: true,
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  ...CellButton.defaultProps,
   content: 'Button',
 };
 

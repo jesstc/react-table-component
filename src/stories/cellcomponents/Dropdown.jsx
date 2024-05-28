@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Select } from '@chakra-ui/react'
 import { useState } from 'react';
 
-export const CellDropdown = ({ dropdownName, defaultValue, dropdownContents, placeholderText }) => {
+export const CellDropdown = ({ dropdownName = '', defaultValue = '', dropdownContents, placeholderText = 'Select Option' }) => {
   const [selectedOption, setSelectedOption] = useState(defaultValue);
   const handleChange = (event) => {
     setSelectedOption(event.target.value);
@@ -27,20 +27,10 @@ export const CellDropdown = ({ dropdownName, defaultValue, dropdownContents, pla
 
 CellDropdown.propTypes = {
   placeholderText: PropTypes.string, 
-  defaultValue: PropTypes.string.isRequired,
+  defaultValue: PropTypes.string,
   dropdownContents: PropTypes.shape({
     value: PropTypes.string.isRequired,
     content: PropTypes.string.isRequired,
   }).isRequired,
   dropdownName: PropTypes.string,
-};
-
-CellDropdown.defaultProps = {
-  placeholderText: 'Select Option', 
-  defaultValue: '',
-  dropdownContents: [
-    {value: '', content: ''},
-  ],
-  dropdownName: '',
-};
-  
+};  

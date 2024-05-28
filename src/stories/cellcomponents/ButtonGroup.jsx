@@ -21,10 +21,3 @@ CellButtonGroup.propTypes = {
     primary: PropTypes.bool,
   }).isRequired,
 };
-
-CellButtonGroup.defaultProps = {
-  btns: [
-    {primary: false, content: '', buttonColor: 'gray', iconName: ''},
-    {primary: false, content: '', buttonColor: 'gray', iconName: ''},
-  ],
-};

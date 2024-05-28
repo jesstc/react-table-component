@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Radio, RadioGroup, Stack } from '@chakra-ui/react'
 import { useState } from 'react';
 
-export const CellRadios = ({ radioName, defaultValue, radioContents }) => {
+export const CellRadios = ({ defaultValue = '', radioName = '', radioContents }) => {
   const [value, setValue] = useState(defaultValue);
 
   return (
@@ -26,13 +26,5 @@ CellRadios.propTypes = {
     value: PropTypes.string.isRequired,
     content: PropTypes.string.isRequired,
   }).isRequired,
-};
-
-CellRadios.defaultProps = {
-  radioName: '', 
-  defaultValue: '',
-  radioContents: [
-    {value: '', content: ''},
-  ],
 };
   

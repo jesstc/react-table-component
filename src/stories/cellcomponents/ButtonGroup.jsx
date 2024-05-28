@@ -14,10 +14,12 @@ export const CellButtonGroup = ({ btns }) => {
 };
 
 CellButtonGroup.propTypes = {
-  btns: PropTypes.shape({
-    content: PropTypes.string.isRequired,
-    buttonColor: PropTypes.oneOf(['gray', 'red', 'yellow', 'green', 'blue']),
-    iconName: PropTypes.string,
-    primary: PropTypes.bool,
-  }).isRequired,
+  btns: PropTypes.arrayOf(
+    PropTypes.shape({
+      content: PropTypes.string.isRequired,
+      buttonColor: PropTypes.oneOf(['gray', 'red', 'yellow', 'green', 'blue']),
+      iconName: PropTypes.string,
+      primary: PropTypes.bool,
+    })
+  ).isRequired,
 };

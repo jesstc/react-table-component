@@ -28,9 +28,11 @@ export const CellDropdown = ({ dropdownName = '', defaultValue = '', dropdownCon
 CellDropdown.propTypes = {
   placeholderText: PropTypes.string, 
   defaultValue: PropTypes.string,
-  dropdownContents: PropTypes.shape({
-    value: PropTypes.string.isRequired,
-    content: PropTypes.string.isRequired,
-  }).isRequired,
+  dropdownContents: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.string.isRequired,
+      content: PropTypes.string.isRequired,
+    })
+  ).isRequired,
   dropdownName: PropTypes.string,
 };  

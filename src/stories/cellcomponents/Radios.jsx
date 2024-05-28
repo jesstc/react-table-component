@@ -22,9 +22,11 @@ export const CellRadios = ({ defaultValue = '', radioName = '', radioContents })
 CellRadios.propTypes = {
   radioName: PropTypes.string, 
   defaultValue: PropTypes.string.isRequired,
-  radioContents: PropTypes.shape({
-    value: PropTypes.string.isRequired,
-    content: PropTypes.string.isRequired,
-  }).isRequired,
+  radioContents: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.string.isRequired,
+      content: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 };
   

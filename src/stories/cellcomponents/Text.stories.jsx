@@ -7,14 +7,15 @@ export default {
   argTypes: {
     content: {
       control: 'text',
+      description: 'The text content of the string.',
     },
     hyperLink: {
       control: 'text',
-      description: 'The url of hyper link. The text will become hyper link only if the value of `hyperLink` is not null.',
+      description: 'The url of hyper link. The text will become hyper link only if the `hyperLink` is not empty string.',
     },
     longTextLines: {
-      control: { type: 'number', min: 0, max: 20, step: 1 },
-      description: 'The number of ellipsis lines when the text is too long to display. The text value will be completely displayed when `longTextLines` is equal to `0`.',
+      control: { type: 'number', min: 0, max: 30, step: 1 },
+      description: 'The number of ellipsis lines when the text is too long to display. The text value will be completely displayed when `longTextLines` is equal to 0.',
     },
     isHeader: {
       control: 'boolean',

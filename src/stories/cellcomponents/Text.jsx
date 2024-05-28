@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { FaSort, FaSortDown, FaSortUp } from "react-icons/fa";
 import { Box } from '@chakra-ui/react';
 
-export const CellText = ({ content, hyperLink, longTextLines, isHeader }) => {
+export const CellText = ({ content, hyperLink = '', longTextLines = 0, isHeader = false }) => {
   const boxStyle = {
     padding: "2px 5px",
     w: '100%',
@@ -48,10 +48,3 @@ CellText.propTypes = {
   longTextLines: PropTypes.number,
   isHeader: PropTypes.bool,
 };
-
-CellText.defaultProps = {
-  content: '',
-  hyperLink: '', 
-  longTextLines: 0,
-  isHeader: false,
-}

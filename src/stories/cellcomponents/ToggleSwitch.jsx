@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Switch } from '@chakra-ui/react'
 import { useState } from 'react';
 
-export const CellToggleSwitch = ({ id, isSwitchChecked, isSwitchReadonly, isSwitchDisabled }) => {
+export const CellToggleSwitch = ({ id = '', isSwitchChecked = false, isSwitchReadonly = false, isSwitchDisabled = false }) => {
   const [isChecked, setIsChecked] = useState(isSwitchChecked);
 
   return (
@@ -23,11 +23,3 @@ CellToggleSwitch.propTypes = {
   isSwitchReadonly: PropTypes.bool,
   isSwitchDisabled: PropTypes.bool,
 };
-
-CellToggleSwitch.defaultProps = {
-  id: '',
-  isSwitchChecked: false,
-  isSwitchReadonly: false,
-  isSwitchDisabled: false,
-};
-  

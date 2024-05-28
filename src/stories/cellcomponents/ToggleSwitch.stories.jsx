@@ -28,26 +28,20 @@ export default {
 const Template = (args) => <CellToggleSwitch {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {
-  ...CellToggleSwitch.defaultProps,
-};
 
 export const CheckedToggleSwitch = Template.bind({});
 CheckedToggleSwitch.args = {
-  ...CellToggleSwitch.defaultProps,
   isSwitchChecked: true,
 };
 
 export const CheckedReadOnlyToggleSwitch = Template.bind({});
 CheckedReadOnlyToggleSwitch.args = {
-  ...CellToggleSwitch.defaultProps,
   isSwitchChecked: true,
   isSwitchReadonly: true,
 };
 
 export const DisabledToggleSwitch = Template.bind({});
 DisabledToggleSwitch.args = {
-  ...CellToggleSwitch.defaultProps,
   isSwitchChecked: true,
   isSwitchDisabled: true,
 };

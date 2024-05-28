@@ -19,11 +19,3 @@ CellImage.propTypes = {
   imgSize: PropTypes.number,
   borderRadius: PropTypes.number,
 };
-
-CellImage.defaultProps = {
-  // imgSrc: '',
-  // altText: '',
-  // imgSize: 100,
-  // borderRadius: 0,
-};
-  

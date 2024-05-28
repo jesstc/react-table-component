@@ -9,26 +9,6 @@ export const BodyCell = ({ CellType = 'CellText', CellProps }) => {
     const Text = CellComponents['CellText'].component;
     return <td> <Text content="Invalid CellType"/> </td>;
   }
-
-  // 
-  // switch (CellType) {
-  //   case 'CellButtonGroup':
-  //     const { btns } = CellProps;
-  //     CellProps = btns;
-  //     break;
-  //   case 'CellDropdown':
-  //     const { placeholderText, dropdownDefaultValue, dropdownContents, dropdownName } = CellProps;
-  //     CellProps = { placeholderText, dropdownDefaultValue, dropdownContents, dropdownName };
-  //     break;
-  //   case 'CellRadios':
-  //     const { radioName, radiosDefaultValue, radioContents } = CellProps;
-  //     CellProps = { radioName, radiosDefaultValue, radioContents };
-  //     break;
-  //   default:
-  //     break;
-  // }
-  // console.log(CellType, CellProps)
-  
   
   return <td> <Component {...CellProps} /> </td>;
 };

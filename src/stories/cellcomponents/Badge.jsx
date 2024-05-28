@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Badge } from '@chakra-ui/react'
 
 export const CellBadge = ({ badgeColor, content }) => {
@@ -10,6 +11,11 @@ export const CellBadge = ({ badgeColor, content }) => {
       {content}
     </Badge>
   );
+};
+
+CellBadge.propTypes = {
+  content: PropTypes.string.isRequired,
+  badgeColor: PropTypes.oneOf(['gray', 'red', 'yellow', 'green', 'blue']),
 };
 
 CellBadge.defaultProps = {

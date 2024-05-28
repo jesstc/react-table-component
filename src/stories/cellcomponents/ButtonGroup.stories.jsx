@@ -7,7 +7,7 @@ export default {
   argTypes: {
     btns: {
       control: 'object',
-      description: 'Pass `BasicButton` parameters to create button group. The parameters include `primary` (boolean), `content` (text), `buttonColor` (select options), and `iconName` (react-icons). See more information in the `Button` story page.',
+      description: 'Pass `CellButton` parameters to create button group. The parameters include `primary` (boolean), `content` (text), `buttonColor` (select options), and `iconName` (react-icons/md). See more information in the `Button` story page.',
     },
   },
   tags: ['autodocs'],
@@ -17,7 +17,10 @@ const Template = (args) => <CellButtonGroup {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  ...CellButtonGroup.defaultProps,
+  btns: [
+    {primary: true, content: 'Button 1', buttonColor: 'blue', iconName: ''},
+    {primary: false, content: 'Button 2', buttonColor: 'blue', iconName: ''}
+  ],
 };
 
 export const FunctionButtonGroup = Template.bind({});

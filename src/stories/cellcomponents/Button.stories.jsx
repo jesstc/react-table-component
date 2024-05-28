@@ -20,7 +20,7 @@ export default {
     },
     iconName: {
       control: 'text',
-      description: 'The icon name of react-icons. See more details in https://react-icons.github.io/react-icons/.',
+      description: 'The icon name of react-icons/md. See more details in https://react-icons.github.io/react-icons/.',
     },
   },
 

@@ -2,14 +2,14 @@ import React from 'react';
 import { CellText } from '../cellcomponents/Text';
 import PropTypes from 'prop-types';
 
-export const HeaderCell = ({ CellTextProps }) => {
+export const HeaderCell = ({ cellTextProps }) => {
   return (
-    <th><CellText isHeader {...CellTextProps}/></th>
+    <th><CellText isHeader {...cellTextProps}/></th>
   );
 };
 
 HeaderCell.propTypes = {
-  CellTextProps: PropTypes.shape({
+  cellTextProps: PropTypes.shape({
     content: PropTypes.string.isRequired,
   }).isRequired,
 };

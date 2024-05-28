@@ -70,72 +70,72 @@ export default {
   title: 'Table Conponents/BodyCell',
   component: BodyCell,
   argTypes: {
-    CellType: {
+    cellType: {
       control: 'select',
       options: Object.keys(CellComponents),
       description: 'Types of cell components.',
     },
-    CellProps: {
+    cellProps: {
       control: 'object',
-      description: 'The values of selected `CellType` component.',
+      description: 'The values of selected `cellType` component.',
     },
   },
   tags: ['autodocs'],
 };
 
 const Template = (args) => {
-  const [{ CellType }, updateArgs] = useArgs();
+  const [{ cellType }, updateArgs] = useArgs();
 
-  // when CellType change, then update CellProps value in control panel
+  // when cellType change, then update cellProps value in control panel
   React.useEffect(() => {
-    defaultCellProps[CellType] && updateArgs({ CellProps: defaultCellProps[CellType] });
-  }, [CellType, updateArgs]);
+    defaultCellProps[cellType] && updateArgs({ cellProps: defaultCellProps[cellType] });
+  }, [cellType, updateArgs]);
 
   return <BodyCell {...args} />;
 }
 
 export const CellText = Template.bind({});
 CellText.args = {
-  CellType: 'CellText',
-  CellProps: defaultCellProps['CellText'],
+  cellType: 'CellText',
+  cellProps: defaultCellProps['CellText'],
 };
 
 export const CellBadge = Template.bind({});
 CellBadge.args = {
-  CellType: 'CellBadge',
-  CellProps: defaultCellProps['CellBadge'],
+  cellType: 'CellBadge',
+  cellProps: defaultCellProps['CellBadge'],
 };
 
 export const CellButton = Template.bind({});
 CellButton.args = {
-  CellType: 'CellButton',
-  CellProps: defaultCellProps['CellButton'],
+  cellType: 'CellButton',
+  cellProps: defaultCellProps['CellButton'],
 };
 
 export const CellButtonGroup = Template.bind({});
 CellButtonGroup.args = {
-  CellType: 'CellButtonGroup',
-  CellProps: defaultCellProps['CellButtonGroup'],
+  cellType: 'CellButtonGroup',
+  cellProps: defaultCellProps['CellButtonGroup'],
 };
 
 export const CellDropdown = Template.bind({});
 CellDropdown.args = {
-  CellType: 'CellDropdown',
-  CellProps: defaultCellProps['CellDropdown'],
+  cellType: 'CellDropdown',
+  cellProps: defaultCellProps['CellDropdown'],
 };
 
 export const CellImage = Template.bind({});
 CellImage.args = {
-  CellType: 'CellImage',
-  CellProps: defaultCellProps['CellImage'],
+  cellType: 'CellImage',
+  cellProps: defaultCellProps['CellImage'],
 };
 export const CellRadios = Template.bind({});
 CellRadios.args = {
-  CellType: 'CellRadios',
-  CellProps: defaultCellProps['CellRadios'],
+  cellType: 'CellRadios',
+  cellProps: defaultCellProps['CellRadios'],
 };
 export const CellToggleSwitch = Template.bind({});
 CellToggleSwitch.args = {
-  CellType: 'CellToggleSwitch',
-  CellProps: defaultCellProps['CellToggleSwitch'],
+  cellType: 'CellToggleSwitch',
+  cellProps: defaultCellProps['CellToggleSwitch'],
 };

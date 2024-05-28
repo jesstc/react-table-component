@@ -1,5 +1,5 @@
 import React from 'react';
-import { CellRadios } from './Radio';
+import { CellRadios } from './Radios';
 
 export default {
   title: 'Cell Conponents/Radio',

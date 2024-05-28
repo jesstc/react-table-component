@@ -15,7 +15,7 @@ export default {
     },
     dropdownContents: {
       control: 'object',
-      description: 'The contents of the dropdown menu. This is a two dimension array, with two items in each element. These two items include keys named `value` (the `value` attribute of the menu option) and `content` (the label of the menu option). `value` represents the value of the `value` tag in the dropdown menu option.',
+      description: 'A two dimensional array includes values and label texts of the options in the dropdown menu.',
     },
     placeholderText: {
       control: 'text',

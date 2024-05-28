@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Select } from '@chakra-ui/react'
 import { useState } from 'react';
 
@@ -24,11 +25,22 @@ export const CellDropdown = ({ dropdownName, defaultValue, dropdownContents, pla
   );
 };
 
+CellDropdown.propTypes = {
+  placeholderText: PropTypes.string, 
+  defaultValue: PropTypes.string.isRequired,
+  dropdownContents: PropTypes.shape({
+    value: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired,
+  }).isRequired,
+  dropdownName: PropTypes.string,
+};
+
 CellDropdown.defaultProps = {
   placeholderText: 'Select Option', 
   defaultValue: '',
   dropdownContents: [
     {value: '', content: ''},
   ],
+  dropdownName: '',
 };
   

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Radio, RadioGroup, Stack } from '@chakra-ui/react'
 import { useState } from 'react';
 
@@ -16,6 +17,15 @@ export const CellRadios = ({ radioName, defaultValue, radioContents }) => {
       </Stack>
     </RadioGroup>
   );
+};
+
+CellRadios.propTypes = {
+  radioName: PropTypes.string, 
+  defaultValue: PropTypes.string.isRequired,
+  radioContents: PropTypes.shape({
+    value: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 CellRadios.defaultProps = {

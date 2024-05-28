@@ -15,7 +15,7 @@ export default {
     },
     radioContents: {
       control: 'object',
-      description: 'The contents of the radio group. This is a two dimension array, with two items in each element. These two items include keys named `value` (the `value` attribute of the radio option) and `content` (the label of the radio option). `value` represents the value of the `value` tag in the radio option.',
+      description: 'A two dimensional array includes values and label texts of the options in the radio group.',
     },
   },
   tags: ['autodocs'],

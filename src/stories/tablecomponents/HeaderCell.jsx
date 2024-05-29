@@ -11,5 +11,6 @@ export const HeaderCell = ({ cellTextProps }) => {
 HeaderCell.propTypes = {
   cellTextProps: PropTypes.shape({
     content: PropTypes.string.isRequired,
+    isSorting: PropTypes.bool,
   }).isRequired,
 };

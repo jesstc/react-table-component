@@ -21,3 +21,11 @@ Default.args = {
     content: '商品名稱',
   },
 };
+
+export const WithSortingIcon = Template.bind({});
+WithSortingIcon.args = {
+  cellTextProps: {
+    content: '商品名稱',
+    isSorting: true,
+  },
+};

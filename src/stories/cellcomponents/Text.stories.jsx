@@ -19,7 +19,12 @@ export default {
     },
     isHeader: {
       control: 'boolean',
-      description: 'Check if this is the header text. The header text will be `bold` and with a sorting icon on the right hand side.',
+      description: 'Check if this is the header text. The header text will be `bold` and can choose if need to sort using `isSorting`.',
+    },
+    isSorting: {
+      control: 'boolean',
+      if: { arg: 'isHeader' },
+      description: 'Check if this header cell need to sort.',
     },
   },
   tags: ['autodocs'],
@@ -48,4 +53,5 @@ export const HeaderColumn = Template.bind({});
 HeaderColumn.args = {
   content: '商品名稱',
   isHeader: true,
+  isSorting: true,
 };

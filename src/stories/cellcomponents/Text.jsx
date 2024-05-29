@@ -6,6 +6,7 @@ import { Box } from '@chakra-ui/react';
 export const CellText = ({ content, hyperLink = '', longTextLines = 0, isHeader = false, isSorting = false }) => {
   const boxStyle = {
     w: '100%',
+    fontSize: "14px",
   };
   const hyperLinkStyle = hyperLink.trim().length !== 0
     && {
@@ -26,6 +27,7 @@ export const CellText = ({ content, hyperLink = '', longTextLines = 0, isHeader 
       alignItems: "center",
       gap: "3px",
       fontWeight: "bold",
+      fontSize: "16px",
     };
 
   return (

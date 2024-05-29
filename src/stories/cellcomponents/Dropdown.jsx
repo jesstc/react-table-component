@@ -10,7 +10,8 @@ export const CellDropdown = ({ dropdownName = '', defaultValue = '', dropdownCon
   };
 
   return (
-    <Select 
+    <Select
+      size='xs' 
       name={dropdownName}
       value={selectedOption} 
       onChange={handleChange} 

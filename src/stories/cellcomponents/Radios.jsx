@@ -11,7 +11,7 @@ export const CellRadios = ({ defaultValue = '', radioName = '', radioContents })
       <Stack direction='column'>
         {
           radioContents.map((radioContent, index) => (
-            <Radio value={radioContent['value']} key={index}>{radioContent['content']}</Radio>
+            <Radio size='sm' value={radioContent['value']} key={index}>{radioContent['content']}</Radio>
           ))
         }
       </Stack>

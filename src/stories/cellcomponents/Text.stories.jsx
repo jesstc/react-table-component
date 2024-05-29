@@ -24,7 +24,7 @@ export default {
     isSorting: {
       control: 'boolean',
       if: { arg: 'isHeader' },
-      description: 'Check if this header cell need to sort.',
+      description: 'Check if this header cell need to sort. The column can be sorted only if the type of column cell is `CellText`.',
     },
   },
   tags: ['autodocs'],

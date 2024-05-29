@@ -47,13 +47,13 @@ export const Default = Template.bind({});
 Default.args = {
   columnNum: 8,
   headLabels: [
-    { content: '狀態', isSorting: true, },
+    { content: '狀態'},
     { content: '商品編號', isSorting: true, },
     { content: '商品圖片'},
     { content: '活動優惠碼'},
     { content: '優惠活動'},
     { content: '優惠活動'},
-    { content: '送貨狀態', isSorting: true, },
+    { content: '送貨狀態'},
     { content: '操作'},
   ],
   cellTypes: ['CellToggleSwitch', 'CellText', 'CellImage', 'CellButton', 'CellDropdown', 'CellRadios', 'CellBadge', 'CellButtonGroup'],
@@ -601,7 +601,7 @@ ProductSaleReport.args = {
   headLabels: [
     { content: '商品編號', isSorting: true, },
     { content: '商品名稱', isSorting: true, },
-    { content: '商品類別', isSorting: true, }, // drop
+    { content: '商品類別'}, // drop
     { content: '供應商名稱', isSorting: true,},
     { content: '庫存量', isSorting: true, },
 
@@ -614,10 +614,10 @@ ProductSaleReport.args = {
     { content: '訂單編號', isSorting: true, },
     { content: '會員編號', isSorting: true, },
     { content: '買家名稱'},
-    { content: '買家地區', isSorting: true, }, // drop
-    { content: '支付方式', isSorting: true, }, // drop
+    { content: '買家地區'}, // drop
+    { content: '支付方式'}, // drop
     
-    { content: '運送方式', isSorting: true, }, // drop
+    { content: '運送方式'}, // drop
     { content: '運費', isSorting: true, },
     { content: '總成本', isSorting: true, },
     { content: '總利潤', isSorting: true, },
@@ -717,20 +717,20 @@ PromotionManagementList.args = {
   headLabels: [
     { content: '活動編號', isSorting: true, },
     { content: '活動名稱', isSorting: true, },
-    { content: '活動類型', isSorting: true, }, // drop
+    { content: '活動類型'}, // drop
     { content: '優惠碼' }, // button
     { content: '折扣百分比', isSorting: true, },
 
     { content: '折扣金額', isSorting: true, },
     { content: '開始日期', isSorting: true, },
     { content: '結束日期', isSorting: true, },
-    { content: '適用商品類別', isSorting: true, }, // drop
-    { content: '適用商品編號', isSorting: true, }, // badge
+    { content: '適用商品類別'}, // drop
+    { content: '適用商品編號'}, // badge
 
     { content: '最低消費金額', isSorting: true, },
     { content: '使用次數限制', isSorting: true, },
     { content: '已使用次數', isSorting: true, },
-    { content: '活動狀態', isSorting: true, }, // badge
+    { content: '活動狀態'}, // badge
     { content: '創建日期', isSorting: true, },
     
     { content: '更新日期', isSorting: true, },
@@ -805,18 +805,18 @@ OrderReport.args = {
     { content: '訂單日期', isSorting: true, },
     { content: '會員編號', isSorting: true, },
     { content: '買家名稱'},
-    { content: '買家地區', isSorting: true, }, // drop
+    { content: '買家地區'}, // drop
 
     { content: '商品編號', isSorting: true, },
     { content: '商品名稱', isSorting: true, },
-    { content: '商品類別', isSorting: true, }, // drop
+    { content: '商品類別'}, // drop
     { content: '單價', isSorting: true, },
     { content: '數量', isSorting: true, },
 
     { content: '總金額', isSorting: true, },
-    { content: '支付方式', isSorting: true, }, // drop
-    { content: '訂單', isSorting: true, }, // badge
-    { content: '運送方式', isSorting: true, }, // drop
+    { content: '支付方式'}, // drop
+    { content: '訂單'}, // badge
+    { content: '運送方式'}, // drop
     { content: '運費', isSorting: true, },
 
     { content: '總成本', isSorting: true, },

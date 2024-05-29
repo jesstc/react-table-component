@@ -17,9 +17,11 @@ export const Table = ({ columnNum = 3, fixedFirstRow = false, fixedLastRow = fal
         (headLabels.length !== columnNum || cellTypes.length !== columnNum) &&
             (errorMsg = 'The format of variable is wrong. Please check your variable formats.');
     else errorMsg = '`headLabels` and `cellTypes` should not be empty.';
-    // check if `cellTypes` is correct
-    cellTypes.map((cellType) => {
+    cellTypes.map((cellType, index) => {
+        // check if `cellTypes` is correct
         !Object.keys(CellComponents).includes(cellType) && (errorMsg = '`' + cellType + '` is a incorrect cellType. Please check `BodyCell` to see more information.');
+        // check if the header cell can be sorted (the column can be sorted only if it is CellText)
+        headLabels[index].isSorting && (cellType !== 'CellText' && (errorMsg = '`' + cellType + '` can not be sorted. The column can be sorted only when the cell type is `CellText`.'));
     });
     
     if (errorMsg !== '') return <div>{errorMsg}</div>;

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import CellComponents from './cellcomponents/CellComponents';
 import { HeaderCell } from './tablecomponents/HeaderCell';
 import { BodyCell } from './tablecomponents/BodyCell';
+import './Table.css';
 
 const allTypes = Object.keys(CellComponents);
   
@@ -21,7 +22,7 @@ export const Table = ({ columnNum = 3, fixedPosition = 'row', fixedFirstCell = f
         !Object.keys(CellComponents).includes(cellType) && (errorMsg = '`' + cellType + '` is a incorrect cellType. Please check `BodyCell` to see more information.');
     });
     
-    if (errorMsg !== '') return <div>{errorMsg}a</div>;
+    if (errorMsg !== '') return <div>{errorMsg}</div>;
     return (
         <table>
             <thead>

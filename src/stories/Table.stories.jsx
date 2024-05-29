@@ -4,6 +4,17 @@ import { Table } from './Table';
 export default {
   title: 'Table',
   component: Table,
+  parameters: {
+    docs: {
+      description: {
+        component: '這個表格元件引用了 Table Components 資料夾中的 `HeaderCell` 與 `BodyCell` 兩個元件，該元件支援以下幾種需求：\n' +
+          '- 表格欄位數可調整（3 ~ 39），可使用 `columnNum` 參數調整。欄位數改變時，請確認 `headLabels`、`cellTypes`、`data` 這幾個陣列參數的元素數量是否等於 `columnNum` 的值，避免執行上跳出錯誤訊息，詳細請參考下方參數說明。\n' +
+          '- 整個表格的「第一欄 / 列」，以及「最後一欄 / 列」可以固定在視窗四周。可使用 `fixedFirstRow`、`fixedFirstCol`、`fixedLastRow`、`fixedLastCol` 這四個參數設定，詳細請參考下方參數說明。\n' +
+          '- 表格元件的標題列（首列）支援 Sorting 的功能，可以在 `headLabels` 中的物件加入 `isSorting: true`，使該欄位有 Sorting 功能，詳細請參考下方參數說明。\n'
+          ,
+      },
+    },
+  },
   argTypes: {
     columnNum: {
       control: { type: 'number', min: 3, max:40, step: 1 },

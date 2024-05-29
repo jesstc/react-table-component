@@ -1,0 +1,39 @@
+import React from 'react';
+import { HeaderCell } from './HeaderCell';
+
+export default {
+  title: 'Table Conponents/HeaderCell',
+  component: HeaderCell,
+  argTypes: {
+    isFixFirstCol: {
+      control: 'boolean',
+      description: 'Check if this cell is fixed in the first column.',
+    },
+    isFixLastCol: {
+      control: 'boolean',
+      description: 'Check if this cell is fixed in the last column.',
+    },
+    cellTextProps: {
+      control: 'object',
+      description: 'The aguments in `CellText` component.',
+    },
+  },
+  tags: ['autodocs'],
+};
+
+const Template = (args) => <HeaderCell {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {
+  cellTextProps: {
+    content: '商品名稱',
+  },
+};
+
+export const WithSortingIcon = Template.bind({});
+WithSortingIcon.args = {
+  cellTextProps: {
+    content: '商品名稱',
+    isSorting: true,
+  },
+};

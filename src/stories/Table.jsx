@@ -58,7 +58,8 @@ export const Table = ({ columnNum = 3, fixedFirstRow = false, fixedLastRow = fal
         });
 
         setSortedData(sorting);
-    }, [sortConfig, sortedData]);
+    }, [sortConfig]);
+        
     
     if (errorMsg !== '') return <div>{errorMsg}</div>;
     return (

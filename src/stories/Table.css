@@ -1,12 +1,49 @@
 table, th, td {
     border: 1px solid #EBEDF0;
     border-collapse: collapse;
+    width: max-content;
 }
 
 th {
     background-color: #F8F9FC;
 }
 
+td {
+    background-color: #FFFFFF;
+}
+
 th, td {
-    padding: 3px 8px;
+    padding: .5em 8px;
+}
+
+.fixed-first-row > th {
+    position: sticky;
+    top: 0; 
+    z-index: 1;
+}
+
+.fixed-first-row > th::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #EBEDF0;
+}
+
+.fixed-last-row > td {
+    position: sticky;
+    bottom: 0;
+    z-index: 1; 
+}
+
+.fixed-last-row > td::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #EBEDF0;
 }

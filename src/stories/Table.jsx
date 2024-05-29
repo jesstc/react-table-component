@@ -7,7 +7,7 @@ import './Table.css';
 
 const allTypes = Object.keys(CellComponents);
   
-export const Table = ({ columnNum = 3, fixedPosition = 'row', fixedFirstCell = false, fixedLastCell = false, headLabels, cellTypes, data }) => {
+export const Table = ({ columnNum = 3, fixedFirstRow = false, fixedLastRow = false, fixedFirstCol = false, fixedLastCol = false, headLabels, cellTypes, data }) => {
     let errorMsg = '';
     // check the value of `columnNum` range from 3 to 40
     (columnNum < 3 || columnNum > 40) &&
@@ -24,32 +24,45 @@ export const Table = ({ columnNum = 3, fixedPosition = 'row', fixedFirstCell = f
     
     if (errorMsg !== '') return <div>{errorMsg}</div>;
     return (
-        <table>
-            <thead>
-                <tr>
-                    {headLabels.map((headCell, index) => (
-                        <HeaderCell key={index} cellTextProps={headCell} />
-                    ))}
-                </tr>
-            </thead>
-            <tbody>
-                {data.map((row, rowIndex) => (
-                    <tr key={rowIndex}>
-                        {row.map((cellProps, colIndex) => (
-                            <BodyCell key={colIndex} cellType={cellTypes[colIndex]} cellProps={cellProps} />
+        <div className='table-container'>
+            <table>
+                <thead>
+                    <tr className={fixedFirstRow ? 'fixed-first-row' : ''}>
+                        {headLabels.map((headCell, index) => (
+                            <HeaderCell 
+                                key={index} 
+                                // isFixFirstCol={fixedFirstCol && index == 0} 
+                                // isFixLastCol={fixedLastCol && index+1 == headLabels.length} 
+                                cellTextProps={headCell} />
                         ))}
                     </tr>
-                ))}
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    {data.map((row, rowIndex) => (
+                        <tr key={rowIndex} className={(fixedLastRow && rowIndex+1 == data.length) ? 'fixed-last-row' : ''}>
+                            {row.map((cellProps, colIndex) => (
+                                <BodyCell 
+                                    key={colIndex} 
+                                    // isFixFirstCol={fixedFirstCol && colIndex == 0} 
+                                    // isFixLastCol={fixedLastCol && colIndex+1 == row.length} 
+                                    cellType={cellTypes[colIndex]} 
+                                    cellProps={cellProps} />
+                            ))}
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
     );
 };
 
 Table.propTypes = {
     columnNum: PropTypes.number,
     fixedPosition: PropTypes.oneOf(['row', 'column']),
-    fixedFirstCell: PropTypes.bool,
-    fixedLastCell: PropTypes.bool,
+    fixedFirstRow: PropTypes.bool,
+    fixedLastRow: PropTypes.bool,
+    fixedFirstCol: PropTypes.bool,
+    fixedLastCol: PropTypes.bool,
     headLabels: PropTypes.arrayOf(
         PropTypes.shape({
             content: PropTypes.string.isRequired,

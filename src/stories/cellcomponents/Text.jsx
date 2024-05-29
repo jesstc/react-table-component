@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { FaSort, FaSortDown, FaSortUp } from "react-icons/fa";
 import { Box } from '@chakra-ui/react';
 
-export const CellText = ({ content, hyperLink = '', longTextLines = 0, isHeader = false, isSorting = false }) => {
+export const CellText = ({ content, hyperLink = '', longTextLines = 0, isHeader = false, isSorting = false, onClick }) => {
   // CellText styles
   const boxStyle = {
     w: '100%',
@@ -31,23 +31,34 @@ export const CellText = ({ content, hyperLink = '', longTextLines = 0, isHeader 
       fontSize: "16px",
     };
 
-  // sorting icon state change
-  const [sortingState, setSortingState] = useState(0);
-  const renderSortingIcon = () => {
-    switch (sortingState % 3) {
-      case 1:
-        return <FaSortDown />;
-      case 2:
-        return <FaSortUp />;
-      default:
-        return <FaSort />;
+  const [sortingState, setSortingState] = useState(-1);
+  
+  // sorting status change
+  const sendSortingStatus = () => {
+    if(onClick) {
+      onClick();  // 執行父元素的 onClick
+      if(isHeader && longTextLines === 0 && isSorting) {
+        setSortingState(sortingState + 1);
+      }
     }
+  };
+
+  // sorting icon state change
+  const renderSortingIcon = () => {
+    switch (sortingState % 2) {
+        case 0:
+          return <FaSortDown />;
+        case 1:
+          return <FaSortUp />;
+        default:
+          return <FaSort />;
+      }
   };
 
   return (
     <Box 
       sx={{...boxStyle, ...hyperLinkStyle, ...longTextStyle, ...headerStyle}}
-      onClick={() => setSortingState(sortingState + 1)}
+      onClick={sendSortingStatus}
       >
         {hyperLink.trim().length !== 0 ? 
           (<a href={hyperLink} target="_blank" rel="noopener noreferrer">{content}</a>)

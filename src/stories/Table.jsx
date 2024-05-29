@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import CellComponents from './cellcomponents/CellComponents';
 import { HeaderCell } from './tablecomponents/HeaderCell';
@@ -23,6 +23,42 @@ export const Table = ({ columnNum = 3, fixedFirstRow = false, fixedLastRow = fal
         // check if the header cell can be sorted (the column can be sorted only if it is CellText)
         headLabels[index].isSorting && (cellType !== 'CellText' && (errorMsg = '`' + cellType + '` can not be sorted. The column can be sorted only when the cell type is `CellText`.'));
     });
+
+
+    // handle sorting
+    const [sortedData, setSortedData] = useState(data);
+    const [sortConfig, setSortConfig] = useState({ key: '0', direction: 'asc' });
+    const handleSorting = (key, isSorting) => {
+        if (isSorting) {
+            let direction = 'asc';
+            if (sortConfig.key === key && sortConfig.direction === 'asc') {
+              direction = 'desc';
+            }
+            setSortConfig({ key, direction });
+        };
+    };
+
+    // 監聽 useState 的參數 發生改變時才會執行
+    useEffect(() => {
+        // sorting
+        const sorting = [...sortedData].sort((a, b) => {
+            if (sortConfig.key) {
+                const aValue = a[sortConfig.key].content;
+                const bValue = b[sortConfig.key].content;
+            
+                if (aValue < bValue) {
+                    return sortConfig.direction === 'asc' ? -1 : 1;
+                }
+                else if (aValue > bValue) {
+                    return sortConfig.direction === 'asc' ? 1 : -1;
+                }
+                return 0;
+            }
+            return 0;
+        });
+
+        setSortedData(sorting);
+    }, [sortConfig, sortedData]);
     
     if (errorMsg !== '') return <div>{errorMsg}</div>;
     return (
@@ -35,12 +71,14 @@ export const Table = ({ columnNum = 3, fixedFirstRow = false, fixedLastRow = fal
                                 key={index} 
                                 isFixFirstCol={fixedFirstCol && index == 0} 
                                 isFixLastCol={fixedLastCol && index+1 == headLabels.length} 
-                                cellTextProps={headCell} />
+                                cellTextProps={headCell}
+                                onClick={() => handleSorting(index, headCell.isSorting)} 
+                            />
                         ))}
                     </tr>
                 </thead>
                 <tbody>
-                    {data.map((row, rowIndex) => (
+                    {sortedData.map((row, rowIndex) => (
                         <tr key={rowIndex} className={(fixedLastRow && rowIndex+1 == data.length) ? 'fixed-last-row' : ''}>
                             {row.map((cellProps, colIndex) => (
                                 <BodyCell 

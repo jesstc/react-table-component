@@ -2,14 +2,14 @@ import React from 'react';
 import { CellText } from '../cellcomponents/Text';
 import PropTypes from 'prop-types';
 
-export const HeaderCell = ({ isFixFirstCol = false, isFixLastCol = false, cellTextProps }) => {
+export const HeaderCell = ({ isFixFirstCol = false, isFixLastCol = false, cellTextProps, onClick }) => {
   // fix column class
   let fixClass = '';
   isFixFirstCol && (fixClass += 'fixed-first-col');
   isFixLastCol && (fixClass += 'fixed-last-col');
   
   return (
-    <th className={fixClass}><CellText isHeader {...cellTextProps}/></th>
+    <th className={fixClass}><CellText isHeader onClick={onClick} {...cellTextProps}/></th>
   );
 };
 

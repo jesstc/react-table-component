@@ -26,6 +26,7 @@ const defaultCellProps = {
       buttonColor: 'blue',
       iconName: ''},
     ],
+    direction: 'row',
   },
   CellDropdown: {
     placeholderText: 'Select Option', 

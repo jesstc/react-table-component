@@ -4,6 +4,13 @@ import { CellToggleSwitch } from './ToggleSwitch';
 export default {
   title: 'Cell Conponents/ToggleSwitch',
   component: CellToggleSwitch,
+  parameters: {
+    docs: {
+      description: {
+        component: 'Toggle 選擇器，可用於 true / false 的顯示。\n',
+      },
+    },
+  },
   argTypes: {
     id: {
       control: 'text',

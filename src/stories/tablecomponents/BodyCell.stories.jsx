@@ -70,6 +70,22 @@ const defaultCellProps = {
 export default {
   title: 'Table Conponents/BodyCell',
   component: BodyCell,
+  parameters: {
+    docs: {
+      description: {
+        component: '這個元件為表格 body 的一個 cell，cell 中支援以下 8 種不同的操作元件：\n' +
+          '- `CellBadge`: 用於表達狀態的文字塊，如訂單狀態、活動檔期狀態等。\n' +
+          '- `CellButton`: 單一按鈕。\n' +
+          '- `CellButtonGroup`: 群組按鈕，可用於資料的操作按鈕，如：編輯、刪除等。\n' +
+          '- `CellDropdown`: 下拉選單。\n' +
+          '- `CellImage`: 圖片。\n' +
+          '- `CellRadios`: 單一選單。\n' +
+          '- `CellText`: 文字。可支援一般文字、超連結、長字串等。\n' +
+          '- `CellToggleSwitch`: Toggle 選擇器，可用於 true / false 的顯示。\n'
+          ,
+      },
+    },
+  },
   argTypes: {
     cellType: {
       control: 'select',

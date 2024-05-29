@@ -4,6 +4,13 @@ import { CellText } from './Text';
 export default {
   title: 'Cell Conponents/Text',
   component: CellText,
+  parameters: {
+    docs: {
+      description: {
+        component: '文字。可支援一般文字、超連結、長字串等。\n',
+      },
+    },
+  },
   argTypes: {
     content: {
       control: 'text',

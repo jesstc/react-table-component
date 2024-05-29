@@ -4,6 +4,13 @@ import { CellImage } from './Image';
 export default {
   title: 'Cell Conponents/Image',
   component: CellImage,
+  parameters: {
+    docs: {
+      description: {
+        component: '圖片。\n',
+      },
+    },
+  },
   argTypes: {
     imgSrc: {
       control: 'text',

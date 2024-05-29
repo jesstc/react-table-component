@@ -4,6 +4,13 @@ import { CellButtonGroup } from './ButtonGroup';
 export default {
   title: 'Cell Conponents/ButtonGroup',
   component: CellButtonGroup,
+  parameters: {
+    docs: {
+      description: {
+        component: '群組按鈕，可用於資料的操作按鈕，如：編輯、刪除等。\n',
+      },
+    },
+  },
   argTypes: {
     btns: {
       control: 'object',

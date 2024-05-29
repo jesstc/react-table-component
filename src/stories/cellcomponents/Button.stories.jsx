@@ -4,6 +4,13 @@ import { CellButton } from './Button';
 export default {
   title: 'Cell Conponents/Button',
   component: CellButton,
+  parameters: {
+    docs: {
+      description: {
+        component: '單一按鈕。\n',
+      },
+    },
+  },
   argTypes: {
     content: {
       control: 'text',

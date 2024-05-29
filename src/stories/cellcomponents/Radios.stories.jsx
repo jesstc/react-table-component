@@ -4,6 +4,13 @@ import { CellRadios } from './Radios';
 export default {
   title: 'Cell Conponents/Radio',
   component: CellRadios,
+  parameters: {
+    docs: {
+      description: {
+        component: '單一選單。\n',
+      },
+    },
+  },
   argTypes: {
     radioName: {
       control: 'text',

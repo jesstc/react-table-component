@@ -4,6 +4,13 @@ import { CellBadge } from './Badge';
 export default {
   title: 'Cell Conponents/Badge',
   component: CellBadge,
+  parameters: {
+    docs: {
+      description: {
+        component: '用於表達狀態的文字塊，如訂單狀態、活動檔期狀態等。\n',
+      },
+    },
+  },
   argTypes: {
     content: {
       control: 'text',

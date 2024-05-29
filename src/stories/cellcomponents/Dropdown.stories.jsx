@@ -4,6 +4,13 @@ import { CellDropdown } from './Dropdown';
 export default {
   title: 'Cell Conponents/Dropdown',
   component: CellDropdown,
+  parameters: {
+    docs: {
+      description: {
+        component: '下拉選單。\n',
+      },
+    },
+  },
   argTypes: {
     dropdownName: {
       control: 'text',

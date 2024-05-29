@@ -9,11 +9,6 @@ export default {
       control: { type: 'number', min: 3, max:40, step: 1 },
       description: 'The number of table columns.',
     },
-    fixedPosition: {
-      control: 'inline-radio',
-      options: ['row', 'column'],
-      description: 'Choose if you want to fix the first or last cell bySupports fixed the first or last cell. Based on this parameter, you can choose to fix the cell by row or by column.',
-    },
     fixedFirstRow: {
       control: 'boolean',
       description: 'To determine whether the first row is fixed.',
@@ -596,6 +591,8 @@ Default.args = {
       },
     ],
   ],
+  fixedFirstRow: true,
+  fixedFirstCol: true,
 };
 
 export const ProductSaleReport = Template.bind({});

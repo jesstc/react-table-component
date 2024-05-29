@@ -58,7 +58,6 @@ export const Table = ({ columnNum = 3, fixedFirstRow = false, fixedLastRow = fal
 
 Table.propTypes = {
     columnNum: PropTypes.number,
-    fixedPosition: PropTypes.oneOf(['row', 'column']),
     fixedFirstRow: PropTypes.bool,
     fixedLastRow: PropTypes.bool,
     fixedFirstCol: PropTypes.bool,

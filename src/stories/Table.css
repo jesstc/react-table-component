@@ -21,11 +21,10 @@ th, td {
     top: 0; 
     z-index: 1;
 }
-
 .fixed-first-row > th::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    top: 100%;
     left: 0;
     width: 100%;
     height: 2px;
@@ -37,7 +36,6 @@ th, td {
     bottom: 0;
     z-index: 1; 
 }
-
 .fixed-last-row > td::after {
     content: '';
     position: absolute;
@@ -46,4 +44,42 @@ th, td {
     width: 100%;
     height: 2px;
     background-color: #EBEDF0;
+}
+
+.fixed-first-col {
+    position: sticky;
+    left: 0;
+    z-index: 1; 
+}
+.fixed-first-col::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 2px;
+    height: 100%;
+    background-color: #EBEDF0;
+}
+
+.fixed-last-col {
+    position: sticky;
+    right: 0;
+    z-index: 1; 
+}
+.fixed-last-col::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #EBEDF0;
+}
+
+/* 四個角的 col 需要在最置頂的位置 */
+.fixed-first-row > .fixed-first-col, 
+.fixed-first-row > .fixed-last-col, 
+.fixed-last-row > .fixed-first-col, 
+.fixed-last-row > .fixed-last-col {
+    z-index: 2; 
 }

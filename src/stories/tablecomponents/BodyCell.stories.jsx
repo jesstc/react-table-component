@@ -76,6 +76,14 @@ export default {
       options: Object.keys(CellComponents),
       description: 'Types of cell components.',
     },
+    isFixFirstCol: {
+      control: 'boolean',
+      description: 'Check if this cell is fixed in the first column.',
+    },
+    isFixLastCol: {
+      control: 'boolean',
+      description: 'Check if this cell is fixed in the last column.',
+    },
     cellProps: {
       control: 'object',
       description: 'The values of selected `cellType` component.',

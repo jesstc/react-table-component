@@ -31,8 +31,8 @@ export const Table = ({ columnNum = 3, fixedFirstRow = false, fixedLastRow = fal
                         {headLabels.map((headCell, index) => (
                             <HeaderCell 
                                 key={index} 
-                                // isFixFirstCol={fixedFirstCol && index == 0} 
-                                // isFixLastCol={fixedLastCol && index+1 == headLabels.length} 
+                                isFixFirstCol={fixedFirstCol && index == 0} 
+                                isFixLastCol={fixedLastCol && index+1 == headLabels.length} 
                                 cellTextProps={headCell} />
                         ))}
                     </tr>
@@ -43,8 +43,8 @@ export const Table = ({ columnNum = 3, fixedFirstRow = false, fixedLastRow = fal
                             {row.map((cellProps, colIndex) => (
                                 <BodyCell 
                                     key={colIndex} 
-                                    // isFixFirstCol={fixedFirstCol && colIndex == 0} 
-                                    // isFixLastCol={fixedLastCol && colIndex+1 == row.length} 
+                                    isFixFirstCol={fixedFirstCol && colIndex == 0} 
+                                    isFixLastCol={fixedLastCol && colIndex+1 == row.length} 
                                     cellType={cellTypes[colIndex]} 
                                     cellProps={cellProps} />
                             ))}

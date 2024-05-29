@@ -9,7 +9,7 @@ export const CellButton = ({ primary = false, buttonColor = 'blue', content, ico
 
   return (
     <Button 
-      size='sm' 
+      size='xs' 
       variant={mode} 
       colorScheme={buttonColor}
       leftIcon={iconName.trim().length !== 0 && <Icon />}
